@@ -146,6 +146,7 @@ class Character:
         y = chargrid[x].index(self)
         return (x, y)
 
+
 #chargrid = [[Character(' ', (0, 0, 0), (255, 255, 255)), ] * 160,] * 160
 chargrid: list[list[Character]] = []
 
@@ -172,6 +173,8 @@ img_yres = Spinbox(newimgframe_yscale, from_=1, width=5)
 img_yres.pack(side=RIGHT, expand=True)
 
 Label(newimgframe_yscale, text='Height').pack(side=RIGHT, expand=True, padx=20)
+
+Label(newimgframe, text='The canvas will be filled\n with the current character.', justify=CENTER).pack(side=TOP, expand=True, fill=BOTH)
 
 def renderChars():
     #renderimg = Image.new('RGB', (len(chargrid), len(chargrid[0])), (0, 0, 0))
